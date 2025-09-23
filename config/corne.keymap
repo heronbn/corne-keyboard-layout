@@ -161,6 +161,11 @@
             bindings = <&kp PT_ACUTE>;
             key-positions = <25 13>;
         };
+
+        equal {
+            bindings = <&kp PT_EQUAL>;
+            key-positions = <1 2>;
+        };
     };
 };
 
