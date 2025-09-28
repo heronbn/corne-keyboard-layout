@@ -123,7 +123,7 @@
 
         TildaSign {
             bindings = <&kp TILDE>;
-            key-positions = <0 12>;
+            key-positions = <27 28>;
             timeout-ms = <20>;
         };
 
@@ -165,6 +165,36 @@
         equal {
             bindings = <&kp PT_EQUAL>;
             key-positions = <1 2>;
+        };
+
+        enter {
+            bindings = <&kp ENTER>;
+            key-positions = <17 29>;
+        };
+
+        ctrlF12 {
+            bindings = <&kp LC(F12)>;
+            key-positions = <35 23>;
+        };
+
+        home {
+            bindings = <&kp C_AC_HOME>;
+            key-positions = <10 11>;
+        };
+
+        end {
+            bindings = <&kp END>;
+            key-positions = <22 23>;
+        };
+
+        pgup {
+            bindings = <&kp PAGE_UP>;
+            key-positions = <32 33>;
+        };
+
+        pgdown {
+            bindings = <&kp PAGE_DOWN>;
+            key-positions = <34 35>;
         };
     };
 };
