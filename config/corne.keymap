@@ -60,7 +60,7 @@
         tdHome: tdHome {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <300>;
             bindings = <&kp HOME>, <&kp LS(HOME)>, <&kp LC(HOME)>;
 
             label = "TDHOME";
@@ -69,7 +69,7 @@
         tdEnd: tdEnd {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <300>;
             bindings = <&kp END>, <&kp LS(END)>, <&kp LC(END)>;
 
             label = "TDEND";
