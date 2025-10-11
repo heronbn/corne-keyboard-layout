@@ -28,7 +28,7 @@
 
 / {
     chosen {
-        zmk,display = &display;
+        zephyr,display = &display;
     };
 };
 
