@@ -31,16 +31,16 @@
     /* Estado ativo para o barramento I2C */
     i2c0_default: i2c0_default {
         group1 {
-            psels = <&pro_micro 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>,      // Pino SDA: P2
-                    <&pro_micro 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;      // Pino SCL: P3 // REMOVED
+            psels = <&pro_micro 2 GPIO_PULL_UP>,      // Pino SDA: P2
+                    <&pro_micro 3 GPIO_PULL_UP>;      // Pino SCL: P3 // REMOVED
         };
     };
 
     /* Estado de baixo consumo (sleep) para o barramento I2C */
     i2c0_sleep: i2c0_sleep {
         group1 {
-            psels = <&pro_micro 2 (GPIO_DISCONNECTED)>,
-                    <&pro_micro 3 (GPIO_DISCONNECTED)>; // REMOVED
+            psels = <&pro_micro 2 GPIO_DISCONNECTED>,
+                    <&pro_micro 3 GPIO_DISCONNECTED>; // REMOVED
         };
     };
 };
