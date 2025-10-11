@@ -25,3 +25,18 @@
         , <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
         ;
 };
+
+&i2c0 {
+	status = "okay"; // Ativa o barramento I2C
+	sda-pin = <&pro_micro 2>; // ! IMPORTANTE: Substitua pelo pino SDA real
+	scl-pin = <&pro_micro 3>; // ! IMPORTANTE: Substitua pelo pino SCL real
+
+	/* Definição do seu display OLED */
+	display: ssd1306@3c {
+		compatible = "solomon,ssd1306fb";
+		reg = <0x3c>; // Endereço I2C do display (0x3c ou 0x3d são comuns)
+		label = "DISPLAY";
+		width = <128>;
+		height = <32>;
+	};
+};
