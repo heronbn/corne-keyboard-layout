@@ -25,7 +25,7 @@
         , <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
         ;
 };
-
+/*
 # /* Bloco de controle de pinos (PINCTRL) */
 # &pinctrl {
 #    /* Estado ativo para o barramento I2C */
@@ -63,3 +63,4 @@
 #		height = <32>;
 #	};
 # };
+*/
