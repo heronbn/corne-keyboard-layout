@@ -31,8 +31,8 @@
 	/* Estado ativo para o barramento I2C */
 	i2c0_default: i2c0_default {
 		group1 {
-			psels = <&pro_micro 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>,      // Pino SDA
-				    <&pro_micro 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;      // Pino SCL
+			psels = <&pro_micro 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>,      // ! IMPORTANTE: Verifique seu pino SDA
+				    <&pro_micro 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;      // ! IMPORTANTE: Verifique seu pino SCL
 		};
 	};
 
@@ -48,10 +48,9 @@
 /* Bloco de configuração do barramento I2C */
 &i2c0 {
 	status = "okay";
-	/* Link para os estados de pinos definidos acima */
 	pinctrl-0 = <&i2c0_default>;
 	pinctrl-1 = <&i2c0_sleep>;
-	pinctrl-names = "default", "sleep"; // <-- CORREÇÃO APLICADA AQUI
+	pinctrl-names = "default", "sleep";
 
 	/* Definição do seu display OLED */
 	display: ssd1306@3c {
