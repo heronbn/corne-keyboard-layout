@@ -26,10 +26,23 @@
         ;
 };
 
+&pinctrl {
+    /* Define um estado/grupo de pinos para o i2c0 */
+	i2c0_default: i2c0_default {
+		group1 {
+            // Atribui os pinos físicos ao barramento I2C
+			psels = <&pro_micro 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>,      // ! IMPORTANTE: Substitua pelo seu pino SDA
+				    <&pro_micro 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;      // ! IMPORTANTE: Substitua pelo seu pino SCL
+		};
+	};
+};
+
+/* Bloco de configuração do barramento I2C */
 &i2c0 {
 	status = "okay"; // Ativa o barramento I2C
-	sda-pin = <&pro_micro 2>; // ! IMPORTANTE: Substitua pelo pino SDA real
-	scl-pin = <&pro_micro 3>; // ! IMPORTANTE: Substitua pelo pino SCL real
+    /* Link para a configuração de pinos definida acima */
+	pinctrl-0 = <&i2c0_default>;
+	pinctrl-names = "default";
 
 	/* Definição do seu display OLED */
 	display: ssd1306@3c {
