@@ -29,19 +29,19 @@
 /* Bloco de controle de pinos (PINCTRL) */
 &pinctrl {
     /* Estado ativo para o barramento I2C */
-    i2c0_default: i2c0_default {
-        group1 {
-            psels = <&pro_micro 2 GPIO_PULL_UP
-                   &pro_micro 3 GPIO_PULL_UP>
+   i2c0_default: i2c0_default {
+       group1 {
+            psels = <&pro_micro 2 GPIO_PULL_UP>
+                  , <&pro_micro 3 GPIO_PULL_UP>
                    ;
-        };
+       };
     };
 
     /* Estado de baixo consumo (sleep) para o barramento I2C */
     i2c0_sleep: i2c0_sleep {
         group1 {
-            psels = <&pro_micro 2 GPIO_DISCONNECTED
-                   &pro_micro 3 GPIO_DISCONNECTED>
+            psels = <&pro_micro 2 GPIO_DISCONNECTED>, 
+                   <&pro_micro 3 GPIO_DISCONNECTED>
                   ;
         };
     };
@@ -49,8 +49,8 @@
 
 /* Bloco de configuração do barramento I2C */
 &i2c0 {
-	status = "okay";
-	pinctrl-0 = <&i2c0_default>;
+status = "okay";
+pinctrl-0 = <&i2c0_default>;
 	pinctrl-1 = <&i2c0_sleep>;
 	pinctrl-names = "default", "sleep";
 
