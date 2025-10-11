@@ -34,8 +34,6 @@
 
 &i2c0 {
 	status = "okay";
-	sda-pin = <2>; /* <26>;  D2 on nice!nano */
-	scl-pin = <3>; /*<31>;  D3 on nice!nano */
 
 	display: ssd1306@3c {
 		compatible = "solomon,ssd1306fb";
