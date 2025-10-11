@@ -9,8 +9,8 @@ on:
       - "config/boards/shields/*.overlay"
       - "config/boards/*/*/*.keymap"
 
-on: [push, pull_request, workflow_dispatch]
-
-jobs:
-  build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+on:
+  [push, pull_request, workflow_dispatch]
+    jobs:
+      build:
+        uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
