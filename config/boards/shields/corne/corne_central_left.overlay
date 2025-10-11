@@ -26,6 +26,10 @@
         ;
 };
 
+&chosen {
+	zmk,display = &display;
+};
+
 &i2c0 {
 	status = "okay";
 
