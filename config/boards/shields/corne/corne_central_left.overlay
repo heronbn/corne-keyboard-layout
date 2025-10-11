@@ -39,8 +39,8 @@
 	/* Estado de baixo consumo (sleep) para o barramento I2C */
 	i2c0_sleep: i2c0_sleep {
 		group1 {
-			psels = <&pro_micro 2 (GPIO_DISCONNECTED)>,
-				    <&pro_micro 3 (GPIO_DISCONNECTED)>;
+			psels = <&pro_micro 2 GPIO_DISCONNECTED>,
+				    <&pro_micro 3 GPIO_DISCONNECTED>;
 		};
 	};
 };
