@@ -26,28 +26,37 @@
         ;
 };
 
+/* Bloco de controle de pinos (PINCTRL) */
 &pinctrl {
-    /* Define um estado/grupo de pinos para o i2c0 */
+	/* Estado ativo para o barramento I2C */
 	i2c0_default: i2c0_default {
 		group1 {
-            // Atribui os pinos físicos ao barramento I2C
-			psels = <&pro_micro 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>,      // ! IMPORTANTE: Substitua pelo seu pino SDA
-				    <&pro_micro 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;      // ! IMPORTANTE: Substitua pelo seu pino SCL
+			psels = <&pro_micro 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>,      // Pino SDA
+				    <&pro_micro 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;      // Pino SCL
+		};
+	};
+
+	/* Estado de baixo consumo (sleep) para o barramento I2C */
+	i2c0_sleep: i2c0_sleep {
+		group1 {
+			psels = <&pro_micro 2 (GPIO_DISCONNECTED)>,
+				    <&pro_micro 3 (GPIO_DISCONNECTED)>;
 		};
 	};
 };
 
 /* Bloco de configuração do barramento I2C */
 &i2c0 {
-	status = "okay"; // Ativa o barramento I2C
-    /* Link para a configuração de pinos definida acima */
+	status = "okay";
+	/* Link para os estados de pinos definidos acima */
 	pinctrl-0 = <&i2c0_default>;
-	pinctrl-names = "default";
+	pinctrl-1 = <&i2c0_sleep>;
+	pinctrl-names = "default", "sleep"; // <-- CORREÇÃO APLICADA AQUI
 
 	/* Definição do seu display OLED */
 	display: ssd1306@3c {
 		compatible = "solomon,ssd1306fb";
-		reg = <0x3c>; // Endereço I2C do display (0x3c ou 0x3d são comuns)
+		reg = <0x3c>;
 		label = "DISPLAY";
 		width = <128>;
 		height = <32>;
