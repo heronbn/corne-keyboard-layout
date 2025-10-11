@@ -44,7 +44,7 @@
 		segment-offset = <0>;
 		page-offset = <0>;
 		display-offset = <0>;
-		multiplex-ratio = <31>; // This line is correct
+		multiplex-ratio = <32>; // This line is correct
 		prechargep = <0x22>;
 	};
 };
