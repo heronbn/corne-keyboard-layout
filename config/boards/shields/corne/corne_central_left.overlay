@@ -26,9 +26,9 @@
         ;
 };
 
-/* Bloco de controle de pinos (PINCTRL) */
-#&pinctrl {
-    /* Estado ativo para o barramento I2C */
+#/* Bloco de controle de pinos (PINCTRL) */
+# &pinctrl {
+#    /* Estado ativo para o barramento I2C */
 #   i2c0_default: i2c0_default {
 #       group1 {
 #            psels = <&pro_micro 2 GPIO_PULL_UP>
@@ -37,7 +37,7 @@
 #       };
 #    };
 
-    /* Estado de baixo consumo (sleep) para o barramento I2C */
+#    /* Estado de baixo consumo (sleep) para o barramento I2C */
 #    i2c0_sleep: i2c0_sleep {
 #        group1 {
 #            psels = <&pro_micro 2 GPIO_DISCONNECTED>, 
@@ -47,14 +47,14 @@
 #    };
 #};
 
-/* Bloco de configuração do barramento I2C */
+#/* Bloco de configuração do barramento I2C */
 #&i2c0 {
 #status = "okay";
 #pinctrl-0 = <&i2c0_default>;
 #	pinctrl-1 = <&i2c0_sleep>;
 #	pinctrl-names = "default", "sleep";
 
-	/* Definição do seu display OLED */
+#	/* Definição do seu display OLED */
 #	display: ssd1306@3c {
 #		compatible = "solomon,ssd1306fb";
 #		reg = <0x3c>;
