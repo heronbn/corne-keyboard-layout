@@ -4,10 +4,23 @@
  * SPDX-License-Identifier: MIT
  */
 
-&i2c0 {
-	status = "okay";
+/* Habilita o display principal do ZMK */
+/ {
+	chosen {
+		zmk,display = &oled;
+	};
 };
 
-&display {
+/* Habilita o barramento I2C */
+&i2c0 {
 	status = "okay";
+
+	/* Define o display OLED no barramento I2C */
+	oled: ssd1306@3c {
+		compatible = "solomon,ssd1306fb";
+		reg = <0x3c>;
+		label = "DISPLAY";
+		width = <128>;
+		height = <32>;
+	};
 };
