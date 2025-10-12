@@ -6,8 +6,8 @@
 
 &i2c0 {
 	status = "okay";
+};
 
-	&display {
-		status = "okay";
-	};
+&display {
+	status = "okay";
 };
