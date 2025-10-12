@@ -7,7 +7,7 @@
 &i2c0 {
 	status = "okay";
 
-	display: &display {
+	&display {
 		status = "okay";
 	};
 };
