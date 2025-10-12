@@ -22,5 +22,6 @@
 		label = "DISPLAY";
 		width = <128>;
 		height = <32>;
+		segment-offset = <0>;
 	};
 };
