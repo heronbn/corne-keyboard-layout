@@ -37,7 +37,7 @@
 
 	display: ssd1306@3c {
 		compatible = "solomon,ssd1306fb";
-		reg = <0x3d>;
+		reg = <0x3c>;
 		label = "DISPLAY";
 		width = <128>;
 		height = <32>;
