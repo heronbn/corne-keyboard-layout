@@ -48,6 +48,9 @@
 		display-offset = <0>;
 		multiplex-ratio = <31>;
 		prechargep = <0x22>;
+		inversion-on;
+		com-invdir;
+		com-sequential;
 	};
 };
 
