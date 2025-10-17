@@ -19,7 +19,10 @@
 
 &lt { quick_tap_ms = <219>; };
 
-&mt { quick_tap_ms = <219>; };
+&mt {
+    quick_tap_ms = <219>;
+    flavor = "tap-preferred";
+};
 
 / {
     behaviors {
