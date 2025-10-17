@@ -104,37 +104,37 @@
         };
 
         BrakLeft {
-            bindings = <&kp LEFT_BRACKET>;
+            bindings = <&kp PT_LEFT_BRACKET>;
             key-positions = <16 17>;
             timeout-ms = <20>;
         };
 
         BrakRight {
-            bindings = <&kp RIGHT_BRACKET>;
+            bindings = <&kp PT_RIGHT_BRACKET>;
             key-positions = <18 19>;
             timeout-ms = <20>;
         };
 
         BraceLeft {
-            bindings = <&kp LEFT_BRACE>;
+            bindings = <&kp PT_LEFT_BRACE>;
             key-positions = <28 29>;
             timeout-ms = <20>;
         };
 
         BraceRight {
-            bindings = <&kp RIGHT_BRACE>;
+            bindings = <&kp PT_RIGHT_BRACE>;
             key-positions = <30 31>;
             timeout-ms = <20>;
         };
 
         DoubleQuote {
-            bindings = <&kp DOUBLE_QUOTES>;
+            bindings = <&kp PT_DOUBLE_QUOTES>;
             key-positions = <15 16>;
             timeout-ms = <20>;
         };
 
         SingleQuote {
-            bindings = <&kp APOSTROPHE>;
+            bindings = <&kp PT_SINGLE_QUOTE>;
             key-positions = <19 20>;
             timeout-ms = <20>;
         };
@@ -161,14 +161,14 @@
         //};
 
         TildaSign {
-            bindings = <&kp TILDE>;
+            bindings = <&kp PT_TILDE>;
             key-positions = <27 28>;
             timeout-ms = <20>;
         };
 
         GraveSign {
-            bindings = <&kp GRAVE>;
-            key-positions = <12 24>;
+            bindings = <&kp PT_GRAVE>;
+            key-positions = <24 25>;
             timeout-ms = <20>;
         };
 
@@ -185,13 +185,13 @@
         };
 
         UnderscoreSign {
-            bindings = <&kp UNDERSCORE>;
+            bindings = <&kp PT_UNDERSCORE>;
             key-positions = <7 8>;
             timeout-ms = <20>;
         };
 
         PipeSign {
-            bindings = <&kp PIPE>;
+            bindings = <&kp PT_PIPE>;
             key-positions = <8 9>;
             timeout-ms = <20>;
         };
@@ -237,7 +237,7 @@
         };
 
         alt {
-            bindings = <&kp LEFT_ALT>;
+            bindings = <&kp PT_ACUTE>;
             key-positions = <26 27>;
         };
     };
