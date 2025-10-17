@@ -15,6 +15,14 @@ config ZMK_SPLIT
 
 endif
 
+config NICE_OLED_VIM
+    default y
+
+config NICE_OLED_VIP_MARCOS
+    default y
+
+config NICE_OLED_POKEMON_ANIMATION
+    default y
 
 #    if LVGL
 #      config LV_Z_VDB_SIZE
