@@ -294,7 +294,7 @@
 
         extrasMedia {
             bindings = <
-&trans  &kp LA(LS(TAB))  &kp LA(TAB)  &trans            &trans                  &trans                     &kp KP_NUM      &mmv MOVE_UP    &trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9
+&trans  &kp LA(LS(TAB))  &kp LA(TAB)  &mkp LCLK         &mkp MCLK               &mkp RCLK                  &kp KP_NUM      &mmv MOVE_UP    &trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9
 &trans  &kp LC(LS(TAB))  &kp LC(TAB)  &kp LG(D)         &kp LA(LC(LEFT_ARROW))  &kp LA(LC(RIGHT_ARROW))    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6
 &trans  &trans           &trans       &trans            &trans                  &trans                     &msc SCRL_UP    &trans          &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3
                                       &kp LEFT_CONTROL  &trans                  &kp PT_SPACE               &kp ENTER       &msc SCRL_DOWN  &kp LEFT_ALT
