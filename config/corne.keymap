@@ -90,6 +90,114 @@
 
             label = "STICKALLT";
         };
+
+        q1F1: q1F1 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <270>;
+            bindings = <&kp PT_Q>, <&kp PT_N1>, <&kp F1>;
+
+            label = "Q1F1";
+        };
+
+        w2F2: w2F2 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <270>;
+            bindings = <&kp PT_W>, <&kp PT_N2>, <&kp F2>;
+
+            label = "W2F2";
+        };
+
+        e3F3: e3F3 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <270>;
+            bindings = <&kp PT_E>, <&kp PT_N3>, <&kp F3>;
+
+            label = "E3F3";
+        };
+
+        r4F4: r4F4 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <270>;
+            bindings = <&kp PT_R>, <&kp PT_N4>, <&kp F4>;
+
+            label = "R4F4";
+        };
+
+        t5F5: t5F5 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <270>;
+            bindings = <&kp PT_T>, <&kp PT_N5>, <&kp F5>;
+
+            label = "T5F5";
+        };
+
+        y6F6: y6F6 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <270>;
+            bindings = <&kp PT_Y>, <&kp PT_N6>, <&kp F6>;
+
+            label = "Y6F6";
+        };
+
+        u7F7: u7F7 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <270>;
+            bindings = <&kp PT_U>, <&kp PT_N7>, <&kp F7>;
+
+            label = "U7F7";
+        };
+
+        i8F8: i8F8 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <270>;
+            bindings = <&kp PT_I>, <&kp PT_N8>, <&kp F8>;
+
+            label = "I8F8";
+        };
+
+        o9F9: o9F9 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <270>;
+            bindings = <&kp PT_O>, <&kp PT_N9>, <&kp F9>;
+
+            label = "O9F9";
+        };
+
+        p0F10: p0F10 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <270>;
+            bindings = <&kp PT_P>, <&kp PT_N0>, <&kp F10>;
+
+            label = "P0F10";
+        };
+
+        semicolonF11cedil: semicolonF11cedil {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <270>;
+            bindings = <&kp PT_SEMICOLON>, <&kp PT_C_CEDILLA>, <&kp F11>;
+
+            label = "SEMICOLONF11CEDIL";
+        };
+
+        slashbslahF12: slashbslahF12 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <270>;
+            bindings = <&kp PT_SLASH>, <&kp BACKSLASH>, <&kp F12>;
+
+            label = "SLASHBSLAHF12";
+        };
     };
 
     combos {
@@ -269,9 +377,9 @@
         default_layer {
             label = "BASE";
             bindings = <
-&kp ESC           &kp Q  &kp W  &kp E      &kp R            &kp T                 &kp Y        &kp U           &kp I         &kp O    &kp P         &tdDel
-&mt LSHIFT TAB    &kp A  &kp S  &kp D      &kp F            &mt LEFT_GUI G        &kp H        &tdJ            &kp K         &kp L    &kp PT_SEMI   &lt 5 PT_C_CEDILLA
-&kp LEFT_CONTROL  &kp Z  &kp X  &kp C      &mt LA(LC(V)) V  &lt 5 B               &kp N        &kp M           &kp COMMA     &kp DOT  &kp PT_SLASH  &lt 3 PT_SINGLE_QUOTE
+&kp ESC           &q1F1  &w2F2  &e3F3      &r4F4            &t5F5                 &y6F6        &u7F7           &i8F8         &o9F9    &p0F10              &tdDel
+&mt LSHIFT TAB    &kp A  &kp S  &kp D      &kp F            &mt LEFT_GUI G        &kp H        &tdJ            &kp K         &kp L    &semicolonF11cedil  &lt 5 PT_C_CEDILLA
+&kp LEFT_CONTROL  &kp Z  &kp X  &kp C      &mt LA(LC(V)) V  &lt 5 B               &kp N        &kp M           &kp COMMA     &kp DOT  &slashbslahF12      &lt 3 PT_SINGLE_QUOTE
                                 &lt 2 TAB  &mo 1            &mt LEFT_ALT SPACE    &lt RSE RET  &lt 3 PT_SPACE  &kp LEFT_ALT
             >;
         };
@@ -279,10 +387,10 @@
         lower_layer {
             label = "LOWER";
             bindings = <
-&kp TILDE  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5       &kp N6           &kp N7       &kp N8        &kp N9       &kp N0            &tdHome
-&kp GRAVE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET        &kp AMPS     &kp ASTRK     &kp LPAR     &kp RPAR          &tdEnd
-&kp LSHFT  &kp N6    &kp N7  &kp N8    &kp N9    &kp N0       &kp LC(LS(TAB))  &kp LC(TAB)  &kp PT_MINUS  &kp PT_PLUS  &kp PT_BACKSLASH  &kp LC(F12)
-                             &mo ADJ   &trans    &kp LGUI     &kp KP_N1        &kp KP_N2    &kp KP_N3
+&kp TILDE         &kp N1    &kp N2  &kp N3    &kp N4    &kp N5       &kp N6           &kp N7       &kp N8        &kp N9       &kp N0            &tdHome
+&kp LEFT_SHIFT    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET        &kp AMPS     &kp ASTRK     &kp LPAR     &kp RPAR          &tdEnd
+&kp LEFT_CONTROL  &kp N6    &kp N7  &kp N8    &kp N9    &kp N0       &kp LC(LS(TAB))  &kp LC(TAB)  &kp PT_MINUS  &kp PT_PLUS  &kp PT_BACKSLASH  &kp LC(F12)
+                                    &mo ADJ   &trans    &kp LGUI     &kp KP_N1        &kp KP_N2    &kp KP_N3
             >;
         };
 
@@ -299,10 +407,10 @@
         fbuttons_layer {
             label = "FUNC";
             bindings = <
-&kp F1           &kp F2           &kp F3           &kp F4             &kp F5      &kp F6         &kp C_VOLUME_DOWN  &kp C_VOLUME_UP   &kp RALT           &kp LSHFT             &kp LCTRL     &kp DELETE
-&kp F7           &kp F8           &kp F9           &kp F10            &kp F11     &kp F12        &kp C_PREVIOUS     &kp C_PLAY_PAUSE  &kp C_NEXT         &kp C_STOP            &kp K_MUTE    &none
-&kp PRINTSCREEN  &kp C_AC_INSERT  &kp PAUSE_BREAK  &kp RIGHT_COMMAND  &kp K_COPY  &kp K_PASTE    &kp PT_ACUTE       &kp PT_GRAVE      &kp PT_APOSTROPHE  &kp PT_DOUBLE_QUOTES  &kp PT_TILDE  &kp PT_CARET
-                                                   &mkp MB1           &mkp MB3    &mkp MB2       &kp BACKSPACE      &kp DELETE        &kp LEFT_ALT
+&kp F1             &kp F2           &kp F3           &kp F4             &kp F5      &kp F6         &kp C_VOLUME_DOWN  &kp C_VOLUME_UP   &kp RALT           &kp LSHFT             &kp LCTRL     &kp DELETE
+&mt LEFT_SHIFT F7  &kp F8           &kp F9           &kp F10            &kp F11     &kp F12        &kp C_PREVIOUS     &kp C_PLAY_PAUSE  &kp C_NEXT         &kp C_STOP            &kp K_MUTE    &none
+&kp LEFT_CONTROL   &kp C_AC_INSERT  &kp PAUSE_BREAK  &kp RIGHT_COMMAND  &kp K_COPY  &kp K_PASTE    &kp PT_ACUTE       &kp PT_GRAVE      &kp PT_APOSTROPHE  &kp PT_DOUBLE_QUOTES  &kp PT_TILDE  &kp PT_CARET
+                                                     &mkp MB1           &mkp MB3    &mkp MB2       &kp BACKSPACE      &kp DELETE        &kp LEFT_ALT
             >;
         };
 
