@@ -389,10 +389,10 @@
         default_layer {
             label = "BASE";
             bindings = <
-&kp ESC           &q1F1  &w2F2  &e3F3      &r4F4            &t5F5                 &y6F6        &u7F7           &i8F8         &o9F9    &p0F10              &tdDel
-&mt LSHIFT TAB    &kp A  &kp S  &kp D      &kp F            &mt LEFT_GUI G        &kp H        &tdJ            &kp K         &kp L    &semicolonF11cedil  &lt 5 PT_C_CEDILLA
-&kp LEFT_CONTROL  &kp Z  &kp X  &kp C      &mt LA(LC(V)) V  &lt 5 B               &kp N        &kp M           &kp COMMA     &kp DOT  &slashbslahF12      &lt 3 PT_SINGLE_QUOTE
-                                &lt 2 TAB  &mo 1            &mt LEFT_ALT SPACE    &lt RSE RET  &lt 3 PT_SPACE  &kp LEFT_ALT
+&kp ESC           &kp PT_Q  &kp PT_W  &kp PT_E   &kp PT_R         &kp PT_T              &kp PT_Y     &kp PT_U        &kp PT_I      &kp PT_O  &kp PT_P            &tdDel
+&mt LSHIFT TAB    &kp A     &kp S     &kp D      &kp F            &mt LEFT_GUI G        &kp H        &tdJ            &kp K         &kp L     &semicolonF11cedil  &lt 5 PT_C_CEDILLA
+&kp LEFT_CONTROL  &kp Z     &kp X     &kp C      &mt LA(LC(V)) V  &lt 5 B               &kp N        &kp M           &kp COMMA     &kp DOT   &slashbslahF12      &lt 3 PT_SINGLE_QUOTE
+                                      &lt 2 TAB  &mo 1            &mt LEFT_ALT SPACE    &lt RSE RET  &lt 3 PT_SPACE  &kp LEFT_ALT
             >;
         };
 
