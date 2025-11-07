@@ -379,6 +379,11 @@
             bindings = <&kp LC(PT_V)>;
             key-positions = <24 26>;
         };
+
+        caps {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <0 1>;
+        };
     };
 };
 
