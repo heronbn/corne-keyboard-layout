@@ -384,6 +384,16 @@
             bindings = <&kp CAPSLOCK>;
             key-positions = <0 1>;
         };
+
+        delete {
+            bindings = <&kp DELETE>;
+            key-positions = <17 4>;
+        };
+
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <3>;
+        };
     };
 };
 
