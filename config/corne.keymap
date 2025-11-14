@@ -388,11 +388,13 @@
         delete {
             bindings = <&kp DELETE>;
             key-positions = <17 4>;
+            timeout-ms = <20>;
         };
 
         backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <3>;
+            key-positions = <3 16>;
+            timeout-ms = <20>;
         };
     };
 };
