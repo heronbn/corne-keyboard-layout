@@ -321,7 +321,7 @@
         };
 
         accent {
-            bindings = <&kp PT_ACUTE>;
+            bindings = <&sl 3>;
             key-positions = <25 13>;
         };
 
