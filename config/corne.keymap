@@ -28,6 +28,8 @@
     quick-tap-ms = <130>;
 };
 
+&sl { release-after-ms = <5000>; };
+
 / {
     behaviors {
         tdF: tap_dance_lang1 {
@@ -58,7 +60,7 @@
         tdDel: tdDel {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             bindings = <&kp BACKSPACE>, <&kp DEL>;
 
             label = "TDDEL";
@@ -89,6 +91,126 @@
             bindings = <&sk LEFT_SHIFT>, <&sk LEFT_ALT>, <&kp CAPSLOCK>;
 
             label = "STICKALLT";
+        };
+
+        q1F1: q1F1 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <270>;
+            bindings = <&kp PT_Q>, <&kp PT_N1>, <&kp F1>;
+
+            label = "Q1F1";
+        };
+
+        w2F2: w2F2 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <270>;
+            bindings = <&kp PT_W>, <&kp PT_N2>, <&kp F2>;
+
+            label = "W2F2";
+        };
+
+        e3F3: e3F3 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <270>;
+            bindings = <&kp PT_E>, <&kp PT_N3>, <&kp F3>;
+
+            label = "E3F3";
+        };
+
+        r4F4: r4F4 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <270>;
+            bindings = <&kp PT_R>, <&kp PT_N4>, <&kp F4>;
+
+            label = "R4F4";
+        };
+
+        t5F5: t5F5 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <270>;
+            bindings = <&kp PT_T>, <&kp PT_N5>, <&kp F5>;
+
+            label = "T5F5";
+        };
+
+        y6F6: y6F6 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <270>;
+            bindings = <&kp PT_Y>, <&kp PT_N6>, <&kp F6>;
+
+            label = "Y6F6";
+        };
+
+        u7F7: u7F7 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <270>;
+            bindings = <&kp PT_U>, <&kp PT_N7>, <&kp F7>;
+
+            label = "U7F7";
+        };
+
+        i8F8: i8F8 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <270>;
+            bindings = <&kp PT_I>, <&kp PT_N8>, <&kp F8>;
+
+            label = "I8F8";
+        };
+
+        o9F9: o9F9 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <270>;
+            bindings = <&kp PT_O>, <&kp PT_N9>, <&kp F9>;
+
+            label = "O9F9";
+        };
+
+        p0F10: p0F10 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <270>;
+            bindings = <&kp PT_P>, <&kp PT_N0>, <&kp F10>;
+
+            label = "P0F10";
+        };
+
+        semicolonF11cedil: semicolonF11cedil {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <270>;
+            bindings = <&kp PT_SEMICOLON>, <&kp PT_C_CEDILLA>, <&kp F11>;
+
+            label = "SEMICOLONF11CEDIL";
+        };
+
+        slashbslahF12: slashbslahF12 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <270>;
+            bindings = <&kp PT_SLASH>, <&kp PT_BACKSLASH>, <&kp F12>;
+
+            label = "SLASHBSLAHF12";
+        };
+
+        printVar: printVar {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <270>;
+            bindings =
+                <&kp C_AC_PRINT>,
+                <&kp LS(PRINTSCREEN)>,
+                <&kp LS(LC(PRINTSCREEN))>;
+
+            label = "PRINTVAR";
         };
     };
 
@@ -201,11 +323,11 @@
         };
 
         accent {
-            bindings = <&kp PT_ACUTE>;
+            bindings = <&sl 3>;
             key-positions = <25 13>;
         };
 
-        equal {
+        stickLayer3 {
             bindings = <&kp PT_EQUAL>;
             key-positions = <1 2>;
         };
@@ -259,6 +381,23 @@
             bindings = <&kp LC(PT_V)>;
             key-positions = <24 26>;
         };
+
+        caps {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <0 1>;
+        };
+
+        delete {
+            bindings = <&kp DELETE>;
+            key-positions = <17 4>;
+            timeout-ms = <20>;
+        };
+
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <3 16>;
+            timeout-ms = <20>;
+        };
     };
 };
 
@@ -269,20 +408,20 @@
         default_layer {
             label = "BASE";
             bindings = <
-&kp ESC           &kp Q  &kp W  &kp E      &kp R            &kp T                 &kp Y        &kp U           &kp I         &kp O    &kp P         &tdDel
-&mt LSHIFT TAB    &kp A  &kp S  &kp D      &kp F            &mt LEFT_GUI G        &kp H        &tdJ            &kp K         &kp L    &kp PT_SEMI   &lt 5 PT_C_CEDILLA
-&kp LEFT_CONTROL  &kp Z  &kp X  &kp C      &mt LA(LC(V)) V  &lt 5 B               &kp N        &kp M           &kp COMMA     &kp DOT  &kp PT_SLASH  &lt 3 PT_SINGLE_QUOTE
-                                &lt 2 TAB  &mo 1            &mt LEFT_ALT SPACE    &lt RSE RET  &lt 3 PT_SPACE  &kp LEFT_ALT
+&kp ESC           &kp PT_Q  &kp PT_W  &kp PT_E   &kp PT_R         &kp PT_T              &kp PT_Y   &kp PT_U        &kp PT_I      &kp PT_O  &kp PT_P                &tdDel
+&mt LSHIFT TAB    &kp A     &kp S     &kp D      &kp F            &mt LEFT_GUI G        &kp H      &tdJ            &kp K         &kp L     &kp PT_SEMICOLON        &lt 5 PT_C_CEDILLA
+&kp LEFT_CONTROL  &kp Z     &kp X     &kp C      &mt LA(LC(V)) V  &lt 5 B               &kp N      &kp M           &kp COMMA     &kp DOT   &mt RIGHT_ALT PT_SLASH  &lt 3 PT_SINGLE_QUOTE
+                                      &lt 2 TAB  &mo 1            &mt LEFT_ALT SPACE    &lt 2 RET  &lt 3 PT_SPACE  &kp LEFT_ALT
             >;
         };
 
         lower_layer {
             label = "LOWER";
             bindings = <
-&kp TILDE  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5       &kp N6           &kp N7       &kp N8        &kp N9       &kp N0            &tdHome
-&kp GRAVE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET        &kp AMPS     &kp ASTRK     &kp LPAR     &kp RPAR          &tdEnd
-&kp LSHFT  &kp N6    &kp N7  &kp N8    &kp N9    &kp N0       &kp LC(LS(TAB))  &kp LC(TAB)  &kp PT_MINUS  &kp PT_PLUS  &kp PT_BACKSLASH  &kp LC(F12)
-                             &mo ADJ   &trans    &kp LGUI     &kp KP_N1        &kp KP_N2    &kp KP_N3
+&kp TILDE         &kp N1    &kp N2  &kp N3    &kp N4    &kp N5       &kp N6           &kp N7       &kp N8        &kp N9       &kp N0            &tdHome
+&kp LEFT_SHIFT    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET        &kp AMPS     &kp ASTRK     &kp LPAR     &kp RPAR          &tdEnd
+&kp LEFT_CONTROL  &kp N6    &kp N7  &kp N8    &kp N9    &kp N0       &kp LC(LS(TAB))  &kp LC(TAB)  &kp PT_MINUS  &kp PT_PLUS  &kp PT_BACKSLASH  &kp LC(F12)
+                                    &mo 4     &none     &kp ENTER    &kp KP_N1        &kp KP_N2    &kp KP_N3
             >;
         };
 
@@ -291,7 +430,7 @@
             bindings = <
 &trans  &kp PAGE_DOWN  &kp UP_ARROW     &kp PG_UP         &kp LC(HOME)  &kp LS(HOME)    &kp CARET  &kp PG_UP  &kp UP    &kp PG_DN  &kp PAGE_UP    &kp HOME
 &trans  &kp LEFT       &kp DOWN_ARROW   &kp RIGHT_ARROW   &kp LC(END)   &kp LS(END)     &kp MINUS  &kp LEFT   &kp DOWN  &kp RIGHT  &kp PAGE_DOWN  &kp END
-&trans  &out OUT_TOG   &kp LS(LC(TAB))  &kp RC(TAB)       &trans        &kp LA(F11)     &kp F15    &kp F16    &kp F23   &trans     &trans         &out OUT_TOG
+&trans  &trans         &kp LS(LC(TAB))  &kp RC(TAB)       &trans        &kp LS(F11)     &kp F15    &kp F16    &kp F23   &trans     &trans         &trans
                                         &kp LEFT_CONTROL  &kp LALT      &kp LG(F12)     &trans     &trans     &trans
             >;
         };
@@ -299,19 +438,19 @@
         fbuttons_layer {
             label = "FUNC";
             bindings = <
-&kp F1           &kp F2           &kp F3           &kp F4             &kp F5      &kp F6         &kp C_VOLUME_DOWN  &kp C_VOLUME_UP   &kp RALT           &kp LSHFT             &kp LCTRL     &kp DELETE
-&kp F7           &kp F8           &kp F9           &kp F10            &kp F11     &kp F12        &kp C_PREVIOUS     &kp C_PLAY_PAUSE  &kp C_NEXT         &kp C_STOP            &kp K_MUTE    &none
-&kp PRINTSCREEN  &kp C_AC_INSERT  &kp PAUSE_BREAK  &kp RIGHT_COMMAND  &kp K_COPY  &kp K_PASTE    &kp PT_ACUTE       &kp PT_GRAVE      &kp PT_APOSTROPHE  &kp PT_DOUBLE_QUOTES  &kp PT_TILDE  &kp PT_CARET
-                                                   &mkp MB1           &mkp MB3    &mkp MB2       &kp BACKSPACE      &kp DELETE        &kp LEFT_ALT
+&kp F1             &kp F2           &kp F3           &kp F4     &kp F5      &kp F6         &kp C_VOLUME_DOWN  &kp C_VOLUME_UP   &kp RALT           &kp LSHFT             &kp LCTRL     &kp DELETE
+&mt LEFT_SHIFT F7  &kp F8           &kp F9           &kp F10    &kp F11     &kp F12        &kp C_PREVIOUS     &kp C_PLAY_PAUSE  &kp C_NEXT         &kp C_STOP            &kp K_MUTE    &printVar
+&kp LEFT_CONTROL   &kp C_AC_INSERT  &kp PAUSE_BREAK  &kp K_CUT  &kp K_COPY  &kp K_PASTE    &kp PT_ACUTE       &kp PT_GRAVE      &kp PT_APOSTROPHE  &kp PT_DOUBLE_QUOTES  &kp PT_TILDE  &kp PT_CARET
+                                                     &mkp MB1   &mkp MB3    &mkp MB2       &kp BACKSPACE      &kp DELETE        &kp LEFT_ALT
             >;
         };
 
         adjust_layer {
             label = "ADJUST";
             bindings = <
-&bootloader  &sys_reset    &out OUT_TOG  &none         &none         &none           &none         &none         &none         &out OUT_TOG  &sys_reset    &bootloader
-&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
-&none        &kp KP_NUM    &none         &none         &none         &none           &none         &none         &none         &none         &none         &none
+&bootloader  &sys_reset    &out OUT_TOG  &none         &none         &bt BT_CLR      &bt BT_CLR    &none         &none         &out OUT_TOG  &sys_reset    &bootloader
+&trans       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &trans
+&none        &kp KP_NUM    &out OUT_TOG  &none         &none         &none           &none         &none         &out OUT_TOG  &none         &none         &none
                                          &trans        &trans        &trans          &trans        &trans        &trans
             >;
         };
@@ -321,7 +460,7 @@
             bindings = <
 &trans  &kp LA(LS(TAB))  &kp LA(TAB)  &mkp LCLK         &mkp MCLK               &mkp RCLK                  &kp KP_NUM      &mmv MOVE_UP    &trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9
 &trans  &kp LC(LS(TAB))  &kp LC(TAB)  &kp LG(D)         &kp LA(LC(LEFT_ARROW))  &kp LA(LC(RIGHT_ARROW))    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6
-&trans  &trans           &trans       &trans            &trans                  &trans                     &msc SCRL_UP    &trans          &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3
+&trans  &printVar        &trans       &trans            &mkp MB4                &mkp MB5                   &msc SCRL_UP    &trans          &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3
                                       &kp LEFT_CONTROL  &trans                  &kp PT_SPACE               &kp ENTER       &msc SCRL_DOWN  &kp LEFT_ALT
             >;
         };
