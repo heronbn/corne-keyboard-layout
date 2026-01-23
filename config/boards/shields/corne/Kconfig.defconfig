@@ -16,12 +16,15 @@ config ZMK_SPLIT
 endif
 
 config NICE_OLED_VIM
+    bool
     default y
 
 config NICE_OLED_VIP_MARCOS
+    bool
     default y
 
 config NICE_OLED_POKEMON_ANIMATION
+    bool
     default y
 
 #    if LVGL
