@@ -229,6 +229,8 @@
             tapping-term-ms = <230>;
             bindings = <&kp N1>, <&kp N2>, <&kp N3>;
 
+            retro-tap;
+            hold-while-undecided;
             label = "ONE_TWO";
         };
 
