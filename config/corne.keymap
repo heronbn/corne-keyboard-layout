@@ -32,6 +32,30 @@
 &sl { release-after-ms = <5000>; };
 
 / {
+    macros {
+        macro_n1: macro_n1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings = <&kp N1>;
+        };
+        macro_n2: macro_n2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings = <&kp N2>;
+        };
+        macro_n3: macro_n3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings = <&kp N3>;
+        };
+    };
+
     behaviors {
         tdF: tap_dance_lang1 {
             compatible = "zmk,behavior-tap-dance";
@@ -227,7 +251,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <230>;
-            bindings = <&kp N1>, <&kp N2>, <&kp N3>;
+            bindings = <&macro_n1>, <&macro_n2>, <&macro_n3>;
 
             label = "ONE_TWO";
         };
