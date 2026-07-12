@@ -213,6 +213,15 @@
 
             label = "PRINTVAR";
         };
+
+        p_tog6: p_tog6 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp PT_P>, <&tog 6>;
+
+            label = "P_TOG6";
+        };
     };
 
     combos {
@@ -409,7 +418,7 @@
         default_layer {
             label = "BASE";
             bindings = <
-&kp ESC           &kp PT_Q  &kp PT_W  &kp PT_E   &kp PT_R         &kp PT_T              &kp PT_Y   &kp PT_U        &kp PT_I      &kp PT_O  &kp PT_P                &tdDel
+&kp ESC           &kp PT_Q  &kp PT_W  &kp PT_E   &kp PT_R         &kp PT_T              &kp PT_Y   &kp PT_U        &kp PT_I      &kp PT_O  &p_tog6                 &tdDel
 &mt LSHIFT TAB    &kp A     &kp S     &kp D      &kp F            &mt LEFT_GUI G        &kp H      &tdJ            &kp K         &kp L     &kp PT_SEMICOLON        &lt 5 PT_C_CEDILLA
 &kp LEFT_CONTROL  &kp Z     &kp X     &kp C      &mt LA(LC(V)) V  &lt 5 B               &kp N      &kp M           &kp COMMA     &kp DOT   &mt RIGHT_ALT PT_SLASH  &lt 3 PT_SINGLE_QUOTE
                                       &lt 2 TAB  &mo 1            &mt LEFT_ALT SPACE    &lt 2 RET  &lt 3 PT_SPACE  &kp LEFT_ALT
