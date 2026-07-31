@@ -91,7 +91,7 @@ lh_pht: left_positional_hold_tap {
             flavor = "tap-preferred";
             tapping-term-ms = <180>;
             quick-tap-ms = <180>;
-            bindings = <&kp SPACE>, <&kp LEFT_ALT>;
+            bindings = <&kp SPACE &kp LEFT_ALT>;
         };
 
         tdDel: tdDel {
