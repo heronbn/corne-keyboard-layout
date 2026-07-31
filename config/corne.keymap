@@ -89,9 +89,8 @@ lh_pht: left_positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <0>;
             flavor = "tap-preferred";
-            tapping-term-ms = <150>;
-            quick-tap-ms = <150>;
-            repeat = <true>;
+            tapping-term-ms = <180>;
+            quick-tap-ms = <180>;
             bindings = <&kp SPACE>, <&kp LEFT_ALT>;
         };
 
