@@ -52,10 +52,6 @@
 		com-invdir;
 		com-sequential;
 		segment-remap;
-
-        /* Reduza este valor para diminuir o brilho (Escala de 0 a 255) */
-        /* Exemplo: 32 ou 64 deixam a tela bem mais fraca e economizam energia */
-        contrast-val = <32>;
 	};
 };
 
