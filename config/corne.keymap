@@ -92,6 +92,8 @@
             tapping-term-ms = <180>;
             quick-tap-ms = <180>;
             bindings = <&kp>, <&kp>;
+
+            retro-tap;
         };
 
         tdDel: tdDel {
